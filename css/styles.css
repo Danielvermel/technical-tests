@@ -141,3 +141,57 @@ h2 {
   font-size: 0.75rem;
   color: var(--slightly-transparent-white);
 }
+
+/*  --- Technical Test 1 -  media queries ---  */ 
+
+@media only screen and (max-width: 1024px) {
+  
+  :root {
+    font-size: 12px;
+  }
+  
+  .content {
+    padding: 3em 4.5em 3em 3em;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  
+  .card-component {
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 600px;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  aside{
+   display: none !important; 
+  }
+  
+  .title, .description, .stats {
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 2em;
+    line-height: 1.75em;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.25em;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+  
+  .stats li {
+    margin-bottom: 2em;
+  }
+  
+}
