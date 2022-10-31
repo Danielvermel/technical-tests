@@ -10,9 +10,9 @@ The goal is to build out a card component and get it looking as close to the [de
 
 #### Technical Test 2
 
-he goal is to build out a prototype for a handy jumplinks component that can be used to anchor users to specific sections in the page (see [video](https://bitbucket.org/numiko/technical-test-2-jumplinks-component/src/master/Sticky-Jumplinks.mp4) for basic example of how it should function).
+The goal is to build out a prototype for a handy jumplinks component that can be used to anchor users to specific sections in the page (see [video](https://bitbucket.org/numiko/technical-test-2-jumplinks-component/src/master/Sticky-Jumplinks.mp4) for basic example of how it should function).
 
-##### Requirements
+#### Requirements
 
 - Open the jump links navigation to see the set of links that they can 'jumplink' down to.
 - On clicking those links it will anchor the page down to that section.
