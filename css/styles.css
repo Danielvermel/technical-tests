@@ -204,7 +204,7 @@ h2 {
     width: 100%;
   }
   
-  .chevron-container {
+  nav, aside, .chevron-container {
    display: none !important; 
   }
   
@@ -230,6 +230,46 @@ h2 {
   .stats li {
     margin-bottom: 2em;
   }
+  
+}
+
+/* Technical Test 2 - Jumplinks Component */
+
+aside {
+  width: 100%;
+  background-color: var(--very-dark-blue);
+  z-index: 2;
+}
+
+.top-aside {
+  position: sticky;
+  display: inline-block;
+  top: 0;
+}
+
+.bottom-aside {
+  position: absolute;
+  bottom: 0;
+}
+
+.aside-container {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  margin: 0 20px;
+  padding: 20px;
+}
+
+.show-button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.show-button:hover {
+  cursor: pointer;
 }
 
 .progress-bar-container {
@@ -243,4 +283,54 @@ h2 {
   height: 8px;
   background-color: var(--soft-violet);
   width: 0%;
+}
+
+nav {
+  position: fixed;
+  background-color: var(--very-dark-blue);
+  width: 100%;
+  z-index: 1;
+}
+
+.close {
+  top: -220px;
+  transition: top 0.7s ease;
+}
+
+.open {
+  top: 63px;
+  transition: top 0.7s ease;
+}
+
+nav ul {
+  margin: 20px;  
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px 20px;
+  width: 33%;
+}
+
+nav ul li .nav-link {
+  text-decoration: none;
+  color:  var(--white);
+}
+
+.section-one, .section-three, .section-five, .section-seven, 
+.section-after-jumplink-two  {
+  display: flex;
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+  min-height: 100vh;
+}
+.section-two, .section-four, .section-six, .section-after-jumplink {
+  display: flex;
+  background-color: var(--very-dark-blue);
+  min-height: 100vh; 
+}
+
+.image-after-jumplink {
+  position: relative;
 }
