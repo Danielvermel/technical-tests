@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+
+:root {
+  
+  /* Colors */
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: rgb(183, 75, 255);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+
+  /* Fonts */
+  font-size: 15px;
+  
+  --inter: 'Inter', sans-serif;
+  --lexend-deca: 'Lexend Deca', sans-serif;
+  
+  /* Scroll Behavior */
+  scroll-behavior: smooth;
+}
+
+/*  defaults  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+ 
+  font-weight: 400
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+/* Utility Classes */
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+
+/* --- Technical Test 1 - Card Component ---  */
+.section-card {
+  min-height: 100vh;
+  background-color: var( --very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.card-component {
+  display: flex;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-direction: row-reverse;
+}
+
+.card-image-container {
+  position: relative;
+}
+
+.card-image-container::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--soft-violet);
+  mix-blend-mode: multiply;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 5.85em 7em 5.85em 5.85em;
+  width: 570px;
+  min-width: 300px;
+}
+
+.title {
+  margin-bottom: 0.75em;
+}
+
+.title span {
+  color: var(--soft-violet);
+}
+
+.description {
+  color: var(--slightly-transparent-white);
+  line-height: 1.5em;
+  margin-bottom: 5em;
+}
+
+.stats {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+
+.stats h2 {
+  margin-bottom: 0.3em;
+}
+
+.stats p {
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.75rem;
+  color: var(--slightly-transparent-white);
+}
