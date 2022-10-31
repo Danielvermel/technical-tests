@@ -5,16 +5,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technical Tests</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   
   <body>
     <div>
-        
+      
+      <header>
+        <nav class="nav close">
+          <ul>
+            <li><a href="#section-one" class="nav-link" >Section One</a></li>
+            <li><a href="#section-two" class="nav-link" >Section Two</a></li>
+            <li><a href="#section-three" class="nav-link" >Section Three</a></li>
+            <li><a href="#section-four" class="nav-link" >Section Four</a></li>
+            <li><a href="#section-five" class="nav-link" >Section Five</a></li>
+            <li><a href="#section-six" class="nav-link" >Section Six</a></li>
+            <li><a href="#section-seven" class="nav-link" >Section Seven</a></li>
+          </ul> 
+        </nav> 
+      </header>
+      
       <main> 
-        <article> 
-          <section class="section-card">
-            <div class="card-component">
+        <article>
+          <aside class="bottom-aside">        
+            <div class="aside-container">
+              <span class="selected-section">Card Component</span>
+              <button class="show-button hidden" >Show</button>
+            </div> 
+          </aside> 
+          
+          <section class="section-card" >
+            <div class="card-component m-auto">
               <div class="card-image-container">
                 <img srcset="./images/image-header-mobile.jpg 654w, ./images/image-header-desktop.jpg 540w"
                     sizes="(max-width: 625px) 654px, 540px"
@@ -30,16 +52,16 @@
                 </p>
                 <ul class="stats">
                   <li>
-                    <p>10k+</p>
-                    <span>companies</span>
+                    <h2>10k+</h2>
+                    <p>companies</p>
                   </li>
                   <li>
-                    <p>314</p>
-                    <span>templates</span>
+                    <h2>314</h2>
+                    <p>templates</p>
                   </li>
                   <li>
-                    <p>12M+</p>
-                    <span>queries</span>
+                    <h2>12M+</h2>
+                    <p>queries</p>
                   </li>
                 </ul>
               </div>
@@ -49,12 +71,43 @@
               <strong class="chevron"></strong>
               <strong class="chevron"></strong>
             </div>
+          </section>
             
+          <section class="section-one" id="section-one" >
+            <h1 class="m-auto">Section One</h1>
+          </section>
+          <section class="section-two" id="section-two" >
+            <h1 class="m-auto">Section Two</h1>
+          </section>
+          <section class="section-three" id="section-three" >
+            <h1 class="m-auto">Section Three</h1>
+          </section>
+          <section class="section-four" id="section-four" >
+            <h1 class="m-auto">Section Four</h1>
+          </section>
+          <section class="section-five" id="section-five" >
+            <h1 class="m-auto">Section Five</h1>
+          </section>
+          <section class="section-six" id="section-six" >
+            <h1 class="m-auto">Section Six</h1>
+          </section>
+          <section class="section-seven" id="section-seven" >
+            <h1 class="m-auto">Section Seven</h1>
           </section>
         </article>
+        
+        <section class="section-after-jumplink m-auto" >
+          <h1 class="m-auto">Section After Jumplink</h1>
+        </section>
+        <section class="section-after-jumplink-two" >
+          <div class="image-after-jumplink m-auto">
+            <img loading="lazy" src="./images/come-on-in.jpg" alt="come on in"/>
+          </div>
+        </section>
+    
       </main>
-      
     </div>  
     
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html> 
