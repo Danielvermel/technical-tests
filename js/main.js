@@ -39,7 +39,7 @@ const specialSections = ['section-card', 'section-after-jumplink', 'section-afte
 
 const aside = document.querySelector('aside');
 
-const config = {
+const configJumpLinkSection = {
   rootMargin: `${document.querySelector('aside').offsetHeight}px`,
   threshold: 1
 };
@@ -47,7 +47,6 @@ const config = {
 const jumpLinkSectionsObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(!entry.isIntersecting) return 
-    
     if(!specialSections.includes(entry.target.className)) {
       selectedSection.innerHTML = entry.target.innerText
       aside.classList.remove('bottom-aside');
@@ -60,14 +59,18 @@ const jumpLinkSectionsObserver = new IntersectionObserver((entries) => {
       showButton.innerHTML = 'Show';
     }
   });
-}, config);
+}, configJumpLinkSection);
+
+const configCardSection = {
+  rootMargin: `${-document.querySelector('aside').offsetHeight}px`,
+  threshold: 0
+};
 
 const cardSectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(!entry.isIntersecting) return
-     
-      aside.classList.add('bottom-aside');
       aside.classList.remove('top-aside');
+      aside.classList.add('bottom-aside');
       showButton.classList.remove('block');
       showButton.classList.add('hidden');
       nav.classList.remove('open');
@@ -75,7 +78,7 @@ const cardSectionObserver = new IntersectionObserver((entries) => {
       selectedSection.innerHTML = 'Card Component';
       showButton.innerHTML = 'Show';
   })
-}, {threshold: 0});
+}, configCardSection);
 
 allSections.forEach((section) => {
   jumpLinkSectionsObserver.observe(section);
